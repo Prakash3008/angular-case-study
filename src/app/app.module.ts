@@ -9,6 +9,8 @@ import { CompaniesComponent } from './companies/companies.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatMenuModule} from '@angular/material/menu';
 import { AgGridModule } from 'ag-grid-angular';
+import { UserEditComponent } from './users/user/user-edit/user-edit.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -16,14 +18,16 @@ import { AgGridModule } from 'ag-grid-angular';
     UsersComponent,
     HeaderComponent,
     UserComponent,
-    CompaniesComponent
+    CompaniesComponent,
+    UserEditComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
     MatMenuModule,
-    AgGridModule
+    AgGridModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
