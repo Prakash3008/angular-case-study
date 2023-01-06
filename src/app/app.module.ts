@@ -11,6 +11,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import { AgGridModule } from 'ag-grid-angular';
 import { UserEditComponent } from './users/user/user-edit/user-edit.component';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,8 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatMenuModule,
     AgGridModule,
     AppRoutingModule

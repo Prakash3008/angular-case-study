@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef } from '@angular/core';
 import { UserService } from './users.service';
 import { ColDef, GridApi, GridReadyEvent, RowNode, SelectionChangedEvent } from 'ag-grid-community';
-import { Users } from './users.model';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -19,19 +18,22 @@ export class UsersComponent {
 
   constructor(private userService: UserService, private route: ActivatedRoute, private router: Router){};
 
-
-  ngOnDestroy(): void {
+  ngOnDestroy(){
     this.subscribe.unsubscribe();
   }
+
   ngOnInit(){
-    this.userService.getUsers().subscribe(data => {
-      this.rowData.push(data);
-      console.log(this.rowData); 
-      this.gridApi.setRowData(this.rowData[0]);   
+    this.userService.getUsers();
+
+    this.subscribe = this.userService.updatedUsers.subscribe(user =>{
+      this.rowData.pop();
+      this.rowData.push(user);
+      console.log(this.rowData);
+      this.gridApi.setRowData(this.rowData[0]); 
     })
-    this.subscribe = this.userService.id.subscribe((index:number)=>{
-      this.selectedId = index;
-    })
+      // this.rowData.push(this.userService.getUsers());
+      // console.log(this.rowData); 
+      
 
   }
 
@@ -60,7 +62,7 @@ export class UsersComponent {
   onSelectionChanged() {
     const selectedData = this.gridApi.getSelectedRows();
     console.log(selectedData);
-    this.userService.id.next(selectedData[0].id);
+    this.router.navigate([selectedData[0].id], { relativeTo: this.route});
   }
   newUser(){
     this.router.navigate(['new'], { relativeTo: this.route});
