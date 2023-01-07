@@ -1,1 +1,22 @@
-<p>companies works!</p>
+
+<div class="h-screen flex items-center justify-center row-auto">
+    <ag-grid-angular
+      style="width: 60%; height: 80%;"
+      class="ag-theme-balham"
+      [columnDefs]="columnDefs"
+      [rowData]="rowData"
+      [defaultColDef]="defaultColDef"
+      [pagination]="true"
+      paginationPageSize="25"
+      rowSelection="single"
+      (selectionChanged)="onSelectionChanged()"
+      (gridReady)="onGridReady($event)"
+    ></ag-grid-angular>
+  </div>
+  <br>
+  <div class="flex items-center justify-center">
+    <a class=" cursor-pointer inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" (click)="newCompany()">New Company</a>
+</div>
+<br>
+<div>  
+ <router-outlet></router-outlet></div>

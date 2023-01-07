@@ -12,6 +12,8 @@ import { AgGridModule } from 'ag-grid-angular';
 import { UserEditComponent } from './users/user/user-edit/user-edit.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CompanyComponent } from './companies/company/company.component';
+import { CompanyEditComponent } from './companies/company/company-edit/company-edit.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     UserComponent,
     CompaniesComponent,
-    UserEditComponent
+    UserEditComponent,
+    CompanyComponent,
+    CompanyEditComponent
   ],
   imports: [
     BrowserModule,

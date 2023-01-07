@@ -86,4 +86,9 @@ export class UserEditComponent {
 
   }
 
+  cancelOperation(){
+    this.router.navigate(['/users']);
+
+  }
+
 }
