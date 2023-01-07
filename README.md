@@ -1,27 +1,47 @@
 # AngularCaseStudy
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
+# Screenshots:
 
-## Development server
+1. Set User Profile:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![Set Profile](screenshots/set_profile.png)
 
-## Code scaffolding
+2. View User Profile:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![View Profile](screenshots/user_profile.png)
 
-## Build
+3. Users HomePage:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![HomePage](screenshots/users_homepage.png)
 
-## Running unit tests
+4. Add New User:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![Add User](screenshots/new_user.png)
 
-## Running end-to-end tests
+5. After Adding New User:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![After Adding New User](screenshots/added_user.png)
 
-## Further help
+6. Update Existing User:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![Update User](screenshots/update_user.png)
+
+7. After Updating User:
+
+![After Updating User](screenshots/after_update.png)
+
+8. Delete User:
+
+![Delete User](screenshots/remove_user.png)
+
+9. After Deleting User:
+
+![After Deleting User](screenshots/after_remove.png)
+
+10. Search User:
+
+![Search User](screenshots/search_user.png)
+
+11. Display User:
+
+![Display User](screenshots/display_user.png)
